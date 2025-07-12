@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    text-align: center;
+    padding: 80px 0px;
+    background: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg');
+    background-size: cover;
+    color: white;
+}
+
+.top-nav h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.top-nav hr {
+    width: 200px;
+    margin: auto;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+
+.top-nav p {
+    padding: 10px 0px;
+    font-size: 90%;
+    width: 260px;
+    margin: auto;
+    font-family: arial;
+}
+
+/*about me*/
+.about-me {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.about-me h2 {
+    font-family: tahoma;
+}
+
+.about-me hr {
+    width: 80px;
+    margin: auto;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+
+.about-me p {
+    font-family: monospace;
+    margin-top: 15px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.read-more {
+    display: none;
+}
+
+/*about me button*/
+.about-me button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: skyblue;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+/*my skills*/
+.my-skills {
+    padding: 20px 0px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.my-skills h2 {
+    font-family: tahoma;
+}
+
+.my-skills hr {
+    width: 80px;
+    margin: auto;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+
+/*my skills imgs*/
+.my-skills img {
+    width: 40px;
+}
+
+.my-skills .img-skills {
+    padding: 15px 0px;
+    background: #d7d7d7;
+    margin-top: 20px;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2px;
+}
+
+.my-skills progress {
+    height: 30px;
+}
+
+.my-skills .lang-skills {
+    padding: 15px 0px;
+    background: #d7d7d7;
+    margin-top: 20px;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2px;
+    font-family: "Archivo Black", sana-serif;
+}
+
+/*my projects*/
+.my-proj {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.my-proj h2 {
+    font-family: tahoma;
+}
+
+.my-proj hr {
+    width: 80px;
+    margin: auto;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+
+.my-proj p {
+    font-family: monospace;
+    margin-top: 15px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.my-proj .proj-links {
+    padding: 15px 0px;
+    margin-top: 20px;
+}
+
+.my-proj .proj-links a {
+    display: block;
+    padding: 10px 0px;
+    font-family: arial;
+}
+
+/*contact me*/
+.contact-me {
+    padding: 20px 0px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.contact-me h2 {
+    font-family: tahoma;
+}
+
+.contact-me hr {
+    width: 80px;
+    margin: auto;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+
+.contact-me form {
+    background: #d7d7d7;
+    padding: 20px 0px;
+    width: 250px;
+    margin: auto;
+    border-radius: 2px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.contact-me form input {
+    display: block;
+    margin: auto;
+    padding: 10px 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+.contact-me form button {
+    background: skyblue;
+    padding: 10px 40px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+.contact-me form .txtarea {
+    padding: 30px 10px;
+}

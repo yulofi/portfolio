@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>Uzziel Allan Carolino | Portfolio</title>
+</head>
+<body>
+    <div class="top-nav">
+        <h1>Hello,</h1>
+        <h1>I'm Uzziel!</h1>
+        <hr>
+        <p>Welcome to my webpage</p>
+    </div>
+    <div class="about-me">
+        <h2>About Me</h2>
+        <hr>
+        <p>Hi there! My name is <b>Uzziel Allan Carolino</b>, and I'm an 18-year-old senior high school graduate from the Philippines with a wide range of interests and skills. I'm a highly motivated and passionate individual, always eager to learn and explore new opportunities.</p>
+        <div class="read-more">
+            <p>Programming became one of my hobbies and passions.  I may have limited knowledge and skills, but I am very determined to expand my expertise in this field. Okay, you might be wondering why I'm here. How did I become passionate about programming? Here's my short story. I love playing video games. Some of my favorites are Minecraft, Call of Duty, and other FPS games. Way back in 2017, when I was 12 years old, I wondered, "How are video games made?" Using my phone, I quickly searched how video games are made, and that's where I discovered the word "programming" or "coding." Then I searched more about it, and that's where I also discovered "C++." I wondered what C++ was, and I kept seeing it everywhere. I found out that I needed to learn it in order to create a video game. Yes, C++ was the first programming language I learned. I searched for videos and applications that could help me learn it, and that's where I discovered the <a href="https://www.sololearn.com" target="blank_" style="text-decoration:none;">SoloLearn</a> app. SoloLearn is a mobile learning platform that offers interactive courses and challenges to help users learn to code.  Throughout the lessons I completed, I learned a lot and really enjoyed studying.</p>
+            <p>Several days passed, and the lessons became increasingly difficult to the point that I could no longer understand them, so I stopped.  The only thing I learned were the basic concepts of programming.</p>
+            <p>The year 2020 marked my return to studying programming. However, I didn't continue with C++ because I realized that app or game development wasn't as easy as I thought. That's when I decided to learn other languages.  On the Sololearn app, I noticed that many users were working primarily with HTML, so I decided to learn it too. Since then, I've focused on web development. I've finished learning HTML, am still improving my CSS skills, and am learning more about JavaScript.</p>
+            <p>I worked on many projects to improve my skills. I created a professional-looking website, iterating on my portfolio several times. I also developed simple JavaScript games, among other things.</p>
+            <p>These projects represent just a sample of my work and dedication to continuous improvement. I'm excited to see what I can accomplish next.</p>
+        </div>
+        <button onclick="showMore()" id="btn">Read More</button>
+    </div>
+    <div class="my-skills">
+        <h2>Skills</h2>
+        <hr>
+        <div class="img-skills">
+            <img src="html-5.png" alt="HTML">
+            <progress max="10" value="9"></progress>
+        </div>
+        <div class="img-skills">
+            <img src="css-3.png" alt="CSS">
+            <progress max="10" value="7"></progress>
+        </div>
+        <div class="img-skills">
+            <img src="js.png" alt="JS">
+            <progress max="10" value="6"></progress>
+        </div>
+        <br><br>
+        <div class="lang-skills">
+            <p>Tagalog/Filipino</p>
+            <progress max="10" value="10"></progress>
+        </div>
+        <div class="lang-skills">
+            <p>English</p>
+            <progress max="10" value="5"></progress>
+        </div>
+    </div>
+    <div class="my-proj">
+        <h2>Projects</h2>
+        <hr>
+        <p>My self-learning journey has yielded several projects, showcased here.</p>
+        <div class="proj-links">
+            <a href="proj/1.html">clicker game</a>
+            <a href="proj/2.html">typewriter js</a>
+            <a href="proj/3.html">number gen</a>
+            <a href="proj/4.html">rps minigame</a>
+            <a href="proj/5.html">guess the num</a>
+            <a href="proj/6.html">html5 canvas with js</a>
+            <a href="proj/7.html">simple clock</a>
+            <a href="proj/8.html">js navigator</a>
+        </div>
+    </div>
+    <div class="contact-me">
+        <h2>Contact</h2>
+        <hr>
+        <form action="https://formsubmit.co/uzzielallancarolino@gmail.com" method="POST">
+            <input placeholder="Name" type="text" name="Name" required>
+            <input placeholder="Email" type="email" name="Email" required>
+            <input class="txtarea" placeholder="Enter your message" type="text" name="Message" required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
