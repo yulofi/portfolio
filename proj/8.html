@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page</title>
+    <style>
+        button {
+            padding: 10px 30px;
+        }
+        
+        * {
+    padding: 0;
+    margin: 0;
+    color: lime;
+}
+
+body {
+    background-color: black;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+p {
+    font-size: 15px;
+}
+
+    </style>
+</head>
+<body>
+    <p>--- userAgent ---</p>
+    <p id="de"></p>
+    <p>--- language ---</p>
+    <p id="pre"></p>
+    <p>--- onLine ---</p>
+    <p id="onl"></p>
+    <p>--- connection ---</p>
+    <p id="con"></p>
+    <p>--- platform ---</p>
+    <p id="plat"></p>
+    <p>--- cookieEnabled ---</p>
+    <p id="cookie"></p>
+</body>
+<script>
+var a = document.getElementById("de");
+var b = document.getElementById("pre");
+var c = document.getElementById("onl");
+var d = document.getElementById("con");
+var e = document.getElementById("plat");
+var f = document.getElementById("cookie");
+
+setInterval(func, 1);
+
+function func() {
+    var dev = navigator.userAgent;
+    var prefLang = navigator.language;
+    var ol = navigator.onLine;
+    var cc;
+    if(ol) {
+        cc = " (internet connected)";
+    } else {
+        cc = " (no internet)";
+    }
+    
+    var cn = navigator.connection;
+    var pltfrm = navigator.platform;
+    var cookies = navigator.cookieEnabled;
+    
+// display the outputs
+    a.innerText = dev;
+    b.innerText = prefLang;
+    c.innerText = ol + cc;
+    d.innerText = 
+    "connection type: "+
+    cn.effectiveType+
+    "\ndownlink speed: "+
+    cn.downlink+" Mbps"+
+    "\nround-trip time (rtt): "+
+    cn.rtt+" ms" +
+    "\nsave data flag: "+
+    cn.saveData;
+    e.innerText = pltfrm;
+    f.innerText = cookies;
+}
+</script>
+</html>

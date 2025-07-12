@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    background-color: black;
+    color: lime;
+}
+    </style>
+    <title>Typewriter</title>
+</head>
+<body>
+    <input type="text" id="text" placeholder="Enter your text">
+    <button onclick="func()">Click</button>
+    <p id="display"></p>
+</body>
+<script>
+   var dis = document.getElementById('display');
+var i = 0;
+var loop;
+
+function func() {
+    var text = document.getElementById('text');
+    loop = setInterval(run, 65);
+}
+
+function run() {
+    dis.innerHTML += text.value[i];
+    i++;
+    
+    if(i === text.value.length) {
+        clearInterval(loop);
+        i = 0;
+    }
+} 
+</script>
+</html>

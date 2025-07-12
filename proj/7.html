@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>digital clock</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    color: lime;
+}
+
+body {
+    background-color: black;
+}
+
+    </style>
+</head>
+<body>
+    <h1 id="dis"></h1>
+</body>
+<script>
+    function digiclock() {
+    var dis = document.getElementById("dis");
+    
+    var time = new Date();
+    
+    var h = time.getHours();
+    var m = time.getMinutes();
+    var s = time.getSeconds();
+
+    dis.textContent = `${h}:${m}:${s}`;
+}
+
+setInterval(digiclock, 1);
+</script>
+</html>

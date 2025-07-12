@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Guess the Number</title>
+        <style>
+            body {
+    background-size: cover;
+    background-repeat: norepeat;
+    background: linear-gradient(
+        to right,
+        lightblue,
+        pink);
+}
+
+h1, h2 {
+    font-family: monospace;
+}
+
+#dis {
+    background-color: white;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+div {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 100px;
+    height: 20px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    padding: 5px 30px;
+}
+
+p {
+    position: absolute;
+    bottom: 0;
+    font-family: monospace;
+}
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Guess the Number (1-10)</h1>
+            <input type="number" min="1" max="10">
+            <button onclick="guess()">Guess</button>
+            <h2>Your answer is:</h2>
+            <h2 id="dis">...</h2>
+        </div>
+    </body>
+<script>
+var number = Math.floor(Math.random() * 10) + 1;
+var player = document.querySelector("input");
+var display = document.getElementById("dis");
+
+function guess() {
+    if(player.value == number) {
+        display.innerHTML = "Correct!";
+    }
+
+    else if(player.value > number) {
+        display.innerHTML = "Too high";
+    }
+
+    else if(player.value < number) {
+        display.innerHTML = "Too low";
+    }
+}
+</script>
+</html>

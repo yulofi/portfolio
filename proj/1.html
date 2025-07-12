@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Clicker Game</title>
+    <style>
+        * {
+    font-family: monospace;
+}
+
+body {
+    background-color: #171717;
+}
+
+.top-txt {
+    color: white;
+    text-align: center;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px 0px;
+    border: 6px solid skyblue;
+}
+
+.top-txt p {
+    color: gray;
+}
+
+.pts-btn {
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.pts-btn button {
+    padding: 50px 50px;
+    font-size: 50px;
+    border-radius: 100px;
+    box-shadow: 5px 5px 10px;
+}
+
+.upg-btn {
+    color: white;
+    text-align: center;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px 0px;
+    border: 6px solid skyblue;
+}
+
+.upg-btn button {
+    padding: 10px 50px;
+    border-radius: 5px;
+    background-color: lime;
+    font-weight: bold;
+}
+
+.bottom {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px 0px;
+    border: 6px solid lightblue;
+}
+
+.bottom .achivement {
+    background-color: gray;
+    color: lightgray;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px 0px;
+}
+    </style>
+    </head>
+    <body>
+    <div class="top-txt">
+        <p>Points:</p>
+        <h1 id="pts"></h1>
+        <p id="ppc"></p>
+    </div>
+    <div class="pts-btn">
+        <button onclick="run()">👆🏻</button>
+    </div>
+    <div class="upg-btn">
+        <h3>Upgrade</h3>
+        <p id="up"></p>
+        <button onclick="upg()" id="upgBtn">+1</button>
+    </div>
+    <div class="bottom">
+        <h1>Achivements</h1>
+        <div id="a"class="achivement">
+            <p>Reach +10 Points per click</p>
+            <h3>Newbie Clicker</h3>
+        </div>
+        <div id="b" class="achivement">
+            <p>Reach +25 Points per click</p>
+            <h3>Clicking Rookie</h3>
+        </div>
+        <div id="c" class="achivement">
+            <p>Reach +40 Points per click</p>
+            <h3>Click Enthusiast</h3>
+        </div>
+        <div id="d" class="achivement">
+            <p>Reach +60 Points per click</p>
+            <h3>Regular Clicker</h3>
+        </div>
+        <div id="e" class="achivement">
+            <p>Reach +75 Points per click</p>
+            <h3>Click Pro</h3>
+        </div>
+        <div id="f" class="achivement">
+            <p>Reach +90 Points per click</p>
+            <h3>Master Clicker</h3>
+        </div>
+        <div id="g" class="achivement">
+            <p>Reach +110 Points per click</p>
+            <h3>Grandmaster Clicker</h3>
+        </div>
+        <div id="h" class="achivement">
+            <p>Reach +130 Points per click</p>
+            <h3>Click Virtuoso</h3>
+        </div>
+        <div id="i" class="achivement">
+            <p>Reach +175 Points per click</p>
+            <h3>Click Legend</h3>
+        </div>
+        <div id="j" class="achivement">
+            <p>Reach +200 Points per click</p>
+            <h3>Ultimate Clicker</h3>
+        </div>
+    </div>
+    </body>
+<script>
+var pts = document.getElementById('pts');
+var ppc = document.getElementById('ppc');
+var up = document.getElementById('up');
+var upgBtn = document.getElementById('upgBtn');
+var achv = document.querySelectorAll('.achivement');
+var points = 0;
+var pointspc = 1;
+var pointsUpg = 100;
+
+setInterval(() => {
+    pts.innerHTML = points;
+    ppc.innerHTML = "Points per click: +" + pointspc;
+    up.innerHTML = "Cost: " + pointsUpg + " points";
+    
+    if(points >= pointsUpg) {
+        upgBtn.style.background = "#9fff80";
+    }
+    else {
+        upgBtn.style.background = "gray";
+    }
+});
+
+function run() {
+    points += pointspc;
+}
+
+function upg() {
+    if(points >= pointsUpg) {
+        pointspc++;
+        points -= pointsUpg;
+        pointsUpg += 20;
+        achvFunc();
+    }
+}
+
+function achvFunc() {
+    if(pointspc === 10) {
+        achv[0].style.background = "skyblue";
+        achv[0].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 25) {
+        achv[1].style.background = "skyblue";
+        achv[1].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 40) {
+        achv[2].style.background = "skyblue";
+        achv[2].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 60) {
+        achv[3].style.background = "skyblue";
+        achv[3].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 75) {
+        achv[4].style.background = "skyblue";
+        achv[4].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 90) {
+        achv[5].style.background = "skyblue";
+        achv[5].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 110) {
+        achv[6].style.background = "skyblue";
+        achv[6].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 130) {
+        achv[7].style.background = "skyblue";
+        achv[7].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 175) {
+        achv[8].style.background = "skyblue";
+        achv[8].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+    else if(pointspc === 200) {
+        achv[9].style.background = "skyblue";
+        achv[9].style.color = "black";
+        alert("New achivement unlocked!");
+    }
+}
+</script>
+</html>

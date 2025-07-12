@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>random number</title>
+    </head>
+    <body>
+        <h1 class="title">RANDOM NUMBER</h1>
+        <div class="inpt">
+            <input type="number" placeholder="Set maximum" id="max">
+        </div>
+        <div class="btn">
+            <button onclick="gen()">Generate</button>
+            <h1 id="display">-</h1>
+        </div>
+    </body>
+<script>
+var display = document.getElementById("display");
+
+function getMax() {
+    var max = document.getElementById("max");
+}
+
+setInterval(getMax, 1);
+
+function gen() {
+    if(max.value === "") {
+        alert("SET YOUR MAX NUMBER BEFORE GENERATING");
+    }
+    var num = Math.floor(Math.random() * max.value) + 1;
+    display.innerHTML = num;
+}
+</script>
+</html>
